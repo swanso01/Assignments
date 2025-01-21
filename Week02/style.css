@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+section {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    
+    background-color: #b5a0db;
+
+}
+
+a :hover {
+    color: #ff0000;
+}
+
