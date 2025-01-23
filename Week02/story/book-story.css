@@ -1,0 +1,18 @@
+#wrapper {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    background-color: #eeeeee;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  p {
+    text-align: justify;
+    text-indent: 2em;
+  }

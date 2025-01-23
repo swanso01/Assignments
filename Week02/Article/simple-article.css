@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .article-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align the image to the left */
+  }
+  
+  .article-content img {
+    margin-right: 20px;
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }

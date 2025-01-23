@@ -1,0 +1,35 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  nav {
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    background-color: #84b3ad;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    width: 100px;
+    margin: 0 5px;
+    padding: 5px 0;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  nav li:hover {
+    background-color: #135e3e;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+  }
