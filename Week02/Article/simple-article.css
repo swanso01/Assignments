@@ -11,12 +11,12 @@ body {
   .article-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align the image to the left */
+    justify-content: flex-start; 
   }
   
   .article-content img {
     margin-right: 20px;
-    max-width: 300px; /* Adjust as needed */
+    max-width: 300px; 
     height: auto;
   }
   
