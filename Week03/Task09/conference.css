@@ -1,0 +1,137 @@
+/* Default font: 300 16px/22px "Lato", sans-serif */
+body {
+    font: 300 16px/22px "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Navigation Header */
+  header {
+    background-color: #2c3e50;
+    padding: 10px 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+  }
+  
+  .event-date {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 60px 20px;
+  }
+  
+  .hero h1 {
+    font-weight: 100;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero h2 {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    max-width: 600px;
+    margin: 10px auto;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #2c3e50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 400;
+  }
+  
+  /* Content Section */
+  .content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+  }
+  
+  .info {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
+  }
+  
+  .info img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .info h3 {
+    color: #333333;
+    margin-top: 10px;
+  }
+  
+  .info p {
+    margin-top: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer nav ul {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer nav ul li {
+    margin: 0 10px;
+  }
+  
+  footer nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  
