@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show</title>
+</head>
+<body>
+    <button onclick="visible()">Hide/Show</button>
+    <div id="div">If you click that button, I vanish </div>
+    <script>
+        function visible() {
+            var div = document.getElementById("div");
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
