@@ -6,13 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="div">This is just sample text</div>
+    <div id="div">This is just text</div>
 
     <script>
         var div = document.getElementById('div');
         div.addEventListener('mouseover', function() {
-            style.backgroundcolor('blue')
+            div.style.backgroundColor="blue"
         });
+        div.addEventListener('mouseout', function() {
+            div.style.backgroundColor="white"
+        });
+
+
     </script>
 </body>
 </html>
