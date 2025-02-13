@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Calculate</title>
+    <title>Array</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: grey;
+            color: white;
+        }
+        td {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
 
-    <script>
-        function PrintAllArray() {
-            var array = ["aaa", "ooo", "uuu"];
-            for (var i = 0; i < array.length; i++) {
-                document.write(array[i] + "<br>");
-            }
-        }
-        PrintAllArray();
-    </script>
+    <table>
+        <tr>
+            <th>Input</th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <td>
+                <script>
+                    var array = ["aaa", "ooo", "uuu"];
+                    document.write(array.join("<br>"));
+                </script>
+            </td>
+            <td>
+                <script>
+                    function PrintAllArray() {
+                        var array = ["aaa", "ooo", "uuu"];
+                        for (var i = 0; i < array.length; i++) {
+                            document.write(array[i] + "<br>");
+                        }
+                    }
+                    PrintAllArray();
+                </script>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
