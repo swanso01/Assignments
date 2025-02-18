@@ -13,7 +13,7 @@
         function startCountdown() {
             var num = parseInt(document.getElementById('userInput').value);
             var timerElement = document.getElementById('timer');
-            if (Number(num) != num || num <= 0) {
+            if (num < 0) {
                 alert("Please enter a positive number");
                 return;
             }
