@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+        <p id="error-message" class="error" style="display: none;">Name is required.</p>
+    </form>
+
+    <script>
+        document.getElementById('myForm').onsubmit = function(event) {
+            var nameInput = document.getElementById('name').value;
+            if (nameInput.trim() === '') {
+                event.preventDefault();
+                document.getElementById('error-message').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

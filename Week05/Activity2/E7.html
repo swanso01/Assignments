@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <p>Timer: <span id="timer"></span></p>
+    <input type="number" id="userInput">
+    <button onclick="startCountdown()">Start Countdown</button>
+    <script>
+        function startCountdown() {
+            var num = parseInt(document.getElementById('userInput').value);
+            var timerElement = document.getElementById('timer');
+            if (Number(num) != num || num <= 0) {
+                alert("Please enter a positive number");
+                return;
+            }
+            var interval = setInterval(() => {
+                timerElement.textContent = num;
+                num--;
+                if (num < 0) {
+                    clearInterval(interval);
+                    timerElement.textContent = "Time's up!";
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

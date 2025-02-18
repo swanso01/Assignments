@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-</head>
-<body>
-    <p>Timer: <span id="timer"></span></p>
-    <input type="number" id="userInput">
-    <button onclick="startCountdown()">Start Countdown</button>
+    <title>Change Image Source on Button Click</title>
+    <style>
+        #myImage {
+            width: 200px;
+            height: auto;
+        }
+    </style>
     <script>
-        function startCountdown() {
-            var num = parseInt(document.getElementById('userInput').value);
-            var timerElement = document.getElementById('timer');
-            if (Number(num) != num || num <= 0) {
-                alert("Please enter a positive number");
-                return;
+        function changeImage() {
+            var img = document.getElementById('myImage');
+            if (img.src.includes('https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg')) {
+                img.src = 'https://th.bing.com/th/id/R.80048c94faacac8b7ff6af18efa3d92a?rik=Ac82coHKVHLVyg&riu=http%3A%2F%2Fwonderfulengineering.com%2Fwp-content%2Fuploads%2F2016%2F01%2Fnature-wallpapers-8.jpg&ehk=GoUR7nA3jNm0gIdWFJoMVL1iu%2BJuWOU7Nu7KkgKZzeQ%3D&risl=&pid=ImgRaw&r=0';
+            } else {
+                img.src = 'https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg';
             }
-            var interval = setInterval(() => {
-                timerElement.textContent = num;
-                num--;
-                if (num < 0) {
-                    clearInterval(interval);
-                    timerElement.textContent = "Time's up!";
-                }
-            }, 1000);
         }
     </script>
+</head>
+<body>
+    <h1>Change Image Button</h1>
+    <img id="myImage" src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg" alt="Image">
+    <br>
+    <button onclick="changeImage()">Change Image</button>
 </body>
 </html>
