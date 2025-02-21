@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>COVID-19 Data</h1>
+    <div id="data"></div>
+
+    <div id="Chart">Chart:</div>
+    <canvas id="myChart"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        async function fetchChartData() {
+            try {
+                const response = await fetch('https://disease.sh/v3/covid-19/all');
+                const data = await response.json();
+                updateChart(data);
+            } catch (error) {
+                console.error('Error fetching chart data:', error);
+            }
+        }
+
+        function updateChart(data) {
+            const labels = ['Cases', 'Deaths', 'Recovered', 'Active Cases'];
+            const chartData = {
+                labels: labels,
+                datasets: [{
+                    label: 'COVID-19 Data',
+                    data: [data.cases, data.deaths, data.recovered, data.active],
+                    backgroundColor: [
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-color-cases'),
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-color-deaths'),
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-color-recovered'),
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-color-active')
+                    ],
+                    borderColor: [
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-border-color-cases'),
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-border-color-deaths'),
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-border-color-recovered'),
+                        getComputedStyle(document.documentElement).getPropertyValue('--bar-border-color-active')
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            const config = {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            };
+
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        }
+
+        fetchChartData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+#data {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+#Chart {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+canvas {
+    max-width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    --bar-color-cases: rgba(255, 99, 132, 0.6);
+    --bar-border-color-cases: rgba(255, 99, 132, 1);
+    --bar-color-deaths: rgba(54, 162, 235, 0.6);
+    --bar-border-color-deaths: rgba(54, 162, 235, 1);
+    --bar-color-recovered: rgba(75, 192, 192, 0.6);
+    --bar-border-color-recovered: rgba(75, 192, 192, 1);
+    --bar-color-active: rgba(153, 102, 255, 0.6);
+    --bar-border-color-active: rgba(153, 102, 255, 1);
+}
