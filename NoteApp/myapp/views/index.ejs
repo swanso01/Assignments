@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Notes App</h1>
+    <form action="/add-note" method="POST">
+        <input class="input1" type="text" name="note" placeholder="Enter a note" required>
+        <input class="input1" type="text" name="category" placeholder="Category (optional)">
+        <input class="colorchange" type="color" name="color" value="#ffffff">
+        <label>
+            <input  type="checkbox" name="important"> Mark as Important
+        </label>
+        <button type="submit">Add Note</button>
+    </form>
+    <ul>
+        <% notes.forEach((note, index) => { %>
+            <li style="background-color: <%= note.color %>;">
+                <strong><%= note.important ? '⭐ ' : '' %></strong>
+                <%= note.text %> - <%= note.timestamp %>
+                <% if (note.category) { %> [<%= note.category %>] <% } %>
+                <form action="/edit-note" method="POST" style="display:inline;">
+                    <input type="hidden" name="index" value="<%= index %>">
+                    <input type="text" name="newText" placeholder="Edit note" required>
+                    <button type="submit">Edit</button>
+                </form>
+                <form action="/delete-note" method="POST" style="display:inline;">
+                    <input type="hidden" name="index" value="<%= index %>">
+                    <button type="submit">Delete</button>
+                </form>
+                <form action="/toggle-important" method="POST" style="display:inline;">
+                    <input type="hidden" name='index' value="<%= index %>">
+                    <button type="submit">Toggle Important</button>
+
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
